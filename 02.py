@@ -2,14 +2,11 @@
 
 prev_no = 1
 current_no = 2
-next_no = 0
 sum = 2 # even numbers only
 
 while current_no < 4000000:
-    next_no = current_no + prev_no
-    prev_no = current_no
-    current_no = next_no
-    print(current_no)
+    prev_no, current_no = current_no, current_no + prev_no
+    # print(current_no)
     if current_no % 2 == 0 and current_no <= 4000000:
         sum += current_no
 
